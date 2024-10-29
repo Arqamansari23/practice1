@@ -1,0 +1,83 @@
+# This file used for data validation it countain all the features on which model had trained . if user enter Features we can check all features are predent or not 
+
+
+
+
+# all columns 
+columns:
+  - case_id: category
+  - continent: category
+  - education_of_employee: category
+  - has_job_experience: category
+  - requires_job_training: category
+  - no_of_employees: int
+  - yr_of_estab: int
+  - region_of_employment: category
+  - prevailing_wage: int
+  - unit_of_wage: category
+  - full_time_position: category
+  - case_status: category
+
+
+
+# Numerical columns 
+numerical_columns:
+  - no_of_employees
+  - prevailing_wage
+  - yr_of_estab
+
+
+
+#catagorical columns 
+categorical_columns:
+  - case_id
+  - continent
+  - education_of_employee
+  - has_job_experience
+  - requires_job_training
+  - region_of_employment
+  - unit_of_wage
+  - full_time_position
+  - case_status
+
+# The Columns we want to drop
+drop_columns:
+  - case_id
+  - yr_of_estab
+
+
+
+
+
+# for data transformation
+
+
+
+
+# min max scaling 
+num_features:
+  - no_of_employees
+  - prevailing_wage
+  - company_age
+
+
+# Ordinal incoding 
+or_columns:
+  - has_job_experience
+  - requires_job_training
+  - full_time_position
+  - education_of_employee
+
+
+
+# One hot encoding 
+oh_columns:
+  - continent
+  - unit_of_wage
+  - region_of_employment
+
+
+# Power Transformation To correct the distribution of data 
+transform_columns:
+  - no_of_employees
+  - company_age
